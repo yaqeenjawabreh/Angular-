@@ -1,0 +1,52 @@
+<div class="d-flex flex-wrap gap-3 p-3">
+<div class="card" style="width: 18rem;">
+  <img [src]="products[0].Image" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{products[0].productsName}}</h5>
+    <p class="card-text">{{products[0].Description}}</p>
+    <p class="card-text">{{products[0].Price}}$</p>
+    <button [disabled]="!products[0].Availability" (click)="buyNow()" class="btn btn-primary">Buy Now</button>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img [src]="products[1].Image" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{products[1].productsName}}</h5>
+    <p class="card-text">{{products[1].Description}}</p>
+      <p class="card-text">{{products[1].Price}}$</p>
+    <button [disabled]="!products[1].Availability" (click)="buyNow()" class="btn btn-primary">Buy Now</button>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img [src]="products[2].Image" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{products[2].productsName}}</h5>
+    <p class="card-text">{{products[2].Description}}</p>
+      <p class="card-text">{{products[2].Price}}$</p>
+    <button [disabled]="!products[2].Availability" (click)="buyNow()" class="btn btn-primary">Buy Now</button>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img [src]="products[3].Image" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{products[3].productsName}}</h5>
+    <p class="card-text">{{products[3].Description}}</p>
+      <p class="card-text">{{products[3].Price}}$</p>
+    <button [disabled]="!products[3].Availability" (click)="buyNow()" class="btn btn-primary">Buy Now</button>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img [src]="products[4].Image" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{products[4].productsName}}</h5>
+    <p class="card-text">{{products[4].Description}}</p>
+      <p class="card-text">{{products[4].Price}}$</p>
+    <button [disabled]="!products[4].Availability" (click)="buyNow()" class="btn btn-primary">Buy Now</button>
+  </div>
+</div>
+
+</div>
