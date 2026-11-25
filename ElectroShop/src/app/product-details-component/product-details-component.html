@@ -3,9 +3,21 @@
   <br><br>
   <img [src]="productImage">
   <br>  
-  <p>{{productDescription}}<p>
+  <p>{{productDescription}}</p>
   <p>Price:{{productPrice}}$</p>
-  <p>quantity:{{quantity}}<p>
-   <p>Discount:{{discountPercentage}}%</p> 
-   <p>{{isAva()}}</p>  
+  <p>quantity:{{quantity()}}</p>
+  <p>Discount:{{discountPercentage}}%</p> 
+  <p>{{isAva()}}</p>  
+
+  <button (click)="Increase()">+</button>
+  <button (click)="Decrease()">-</button> 
+  <br>
+  <button (click)="EmiteData()">Add to cart</button> 
+
+  <br><br><hr>
+  <h1>product information from AppComponent to ProductDetailsComponent </h1>
+  <p>{{ProductNameChild}}</p>
+  <p>{{ProductDescriptionChild}}</p>
+  <p>{{ProductPriceChild}}$</p>
+  <p>{{ProductAvailabilityChildMsg()}}</p> 
 </div>

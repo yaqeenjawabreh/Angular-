@@ -6,7 +6,8 @@
 <br><br><br>
 <app-product-list-component></app-product-list-component>
 <br><br><hr>
-<app-product-details-component></app-product-details-component>
-
+<app-product-details-component (multiData)="logMulti($event)" [ProductNameChild]="ProductName()" [ProductDescriptionChild]="ProductDescription()" [ProductPriceChild]="ProductPrice()" [ProductAvailabilityChild]="ProductAvailability()"></app-product-details-component>
+<br><br><hr>
+<app-shopping-cart-component [name]="NameFromChiled" [quaitiy]="QFromChiled"></app-shopping-cart-component>
 <br><br>
 <app-footer-component></app-footer-component>
