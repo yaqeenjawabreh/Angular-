@@ -1,4 +1,4 @@
-<div class="d-flex flex-wrap gap-3 p-3">
+<!-- <div class="d-flex flex-wrap gap-3 p-3">
 <div class="card" style="width: 18rem;">
   <img [src]="products[0].Image" class="card-img-top" >
   <div class="card-body">
@@ -48,5 +48,72 @@
     <button [disabled]="!products[4].Availability" (click)="buyNow()" class="btn btn-primary">Buy Now</button>
   </div>
 </div>
+
+</div> -->
+<div class="container row m-4">
+  
+@for(p of products;track p.id){
+<div class="card m-2 " style="width: 18rem;">
+  <img [src]="p.Image" class="card-img-top"  >
+  <div class="card-body">
+    <h5 class="card-title">{{p.productsName}}</h5>
+    <p>{{p.category}}</p>
+
+    @if(p.Availability){
+    <p class="available-card">Available</p>}
+    @else {<p class="unavailable-card" [ngStyle]="{'opacity': '0.5'}">Out of Stock</p>}
+
+    @if(p.discount>0){
+          <p [ngStyle]="{'color':'red'}">{{p.Price}}$</p>
+      <p class="discount-card">Special Offer</p>}
+    @else{<p [ngStyle]="{'color':'black'}">{{p.Price}}$</p>
+    <p >No Discount</p>}
+    
+    @if(p.Price>500){<p class="premium-card" [ngStyle]="{'fontsize':'30px'}">Premium Product</p>}
+    @if(p.Availability){<button type="button" class="btn btn-success">Buy now</button>}
+
+  </div>
+</div>
+}
+
+</div>
+@switch(orderStatus){
+  @case("Pending"){
+    <p>Your order is waiting for confirmation.</p>
+  }
+  @case("Processing"){
+    <p>Your order is being prepared.</p>
+  }
+   @case("Shipped"){
+    <p>Your order has been shipped.</p>
+  }
+   @case("Delivered"){
+    <p>Your order has been delivered.</p>
+  }
+  @default{<p>Unknown Order Status</p>}
+}
+
+
+<div class="container mt-4">
+
+  <h3>Product Categories</h3>
+
+  <div class="d-flex gap-3 mb-3">
+    <span>All Products</span>
+    <span>Electronics</span>
+    <span>Accessories</span>
+  </div>
+
+  @if(selectedCategory == 'All Products') {
+    <p>You are viewing all products.</p>
+  }
+
+  @else if(selectedCategory == 'Electronics') {
+    <p>You are viewing electronics products.</p>
+  }
+
+  @else if(selectedCategory == 'Accessories') {
+    <p>You are viewing accessories products.</p>
+  }
 
 </div>

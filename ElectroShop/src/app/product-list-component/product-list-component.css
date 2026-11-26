@@ -1,0 +1,45 @@
+
+/* Discount Card */
+.discount-card {
+  color: #dc3545;
+  background-color: #fff0f0;
+  border: 1px dashed #dc3545;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Available Card */
+.available-card {
+  color: #198754;
+  background-color: #e8f7ee;
+  border: 1px solid #198754;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Unavailable Card */
+.unavailable-card {
+  color: #dc3545;
+  background-color: #fff0f0;
+  border: 1px solid #dc3545;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Premium Card */
+.premium-card {
+  color: #8e44ad;
+  background-color: #f5eafa;
+  border: 2px solid #8e44ad;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
